@@ -33,6 +33,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="e6u-2m-I7Y">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="A70-Kd-vyg">
                                     <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -40,7 +41,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="yLM-Kb-Xsn">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="yLM-Kb-Xsn" customClass="PokeCell" customModule="Pokedex_xcode8_swift3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -70,6 +71,10 @@
                                             <constraint firstAttribute="trailing" secondItem="89N-2h-PfF" secondAttribute="trailing" id="aTG-EQ-qrU"/>
                                             <constraint firstItem="89N-2h-PfF" firstAttribute="top" secondItem="yLM-Kb-Xsn" secondAttribute="top" id="xeA-yR-3vL"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="pokeName" destination="hQ8-P7-KFo" id="FiZ-G9-KRc"/>
+                                            <outlet property="thumbImage" destination="89N-2h-PfF" id="5We-fD-vNo"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -92,6 +97,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="e6u-2m-I7Y" secondAttribute="trailing" id="qYC-jd-eAp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="e6u-2m-I7Y" id="wny-O0-9o6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
