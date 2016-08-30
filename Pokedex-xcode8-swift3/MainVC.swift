@@ -69,8 +69,19 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         } catch let err as NSError {
             print(err.debugDescription)
         }
-        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PokemonDetailVC" {
+            if let detailVC = segue.destination as? PokemonDetailVC {
+                if let poke = sender as? Pokemon {
+                    detailVC.pokemon = poke 
+                }
+            }
+        }
+    }
+    
+    //MARK: CollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -98,8 +109,19 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+  
+        var poke: Pokemon!
         
-    }
+        if inSearchMode {
+            
+            poke = filteredPokemon[indexPath.row]
+        } else {
+            
+            poke = pokemon[indexPath.row]
+        }
+        
+        performSegue(withIdentifier: "PokemonDetailVC", sender: poke)
+}
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if inSearchMode {
@@ -118,6 +140,10 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         
         return CGSize(width: 100, height: 100)
     }
+    
+    
+    
+    //MARK: SearchBar
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
@@ -153,6 +179,5 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             sender.alpha = 1.0
         }
     }
-    
 }
 

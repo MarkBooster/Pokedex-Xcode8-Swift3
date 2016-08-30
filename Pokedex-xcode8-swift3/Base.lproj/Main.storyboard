@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -133,11 +133,48 @@
                     <connections>
                         <outlet property="collectionView" destination="e6u-2m-I7Y" id="wny-O0-9o6"/>
                         <outlet property="searchBar" destination="ip3-C0-ygl" id="3eS-nV-2xp"/>
+                        <segue destination="cRp-WG-DNb" kind="show" identifier="PokemonDetailVC" id="nBY-lF-3rO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="47" y="135"/>
+        </scene>
+        <!--Pokemon DetailVC-->
+        <scene sceneID="Hre-8O-iEF">
+            <objects>
+                <viewController id="cRp-WG-DNb" customClass="PokemonDetailVC" customModule="Pokedex_xcode8_swift3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3on-hw-kaI"/>
+                        <viewControllerLayoutGuide type="bottom" id="enL-vr-VOi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bOK-mh-RFB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkW-hB-nBq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0er-1G-Bkm"/>
+                                    <constraint firstAttribute="width" constant="185" id="UBF-iW-BF9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pkW-hB-nBq" firstAttribute="centerX" secondItem="bOK-mh-RFB" secondAttribute="centerX" id="6xf-QI-3dn"/>
+                            <constraint firstItem="pkW-hB-nBq" firstAttribute="centerY" secondItem="bOK-mh-RFB" secondAttribute="centerY" id="JZA-Je-Cfx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLbl" destination="pkW-hB-nBq" id="NEu-xM-a4S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C2k-vF-e5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776.79999999999995" y="133.5832083958021"/>
         </scene>
     </scenes>
     <resources>

@@ -19,6 +19,7 @@
 		8501BBF31D6DBC8600E142F1 /* pokedexmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8501BBF21D6DBC8600E142F1 /* pokedexmusic.mp3 */; };
 		8501BBF51D6DBD6300E142F1 /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8501BBF41D6DBD6300E142F1 /* pokemon.ttf */; };
 		8501BBF71D6DBDB200E142F1 /* Pokedex.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8501BBF61D6DBDB200E142F1 /* Pokedex.ttf */; };
+		8573B8A31D7581E10005243C /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573B8A21D7581E10005243C /* PokemonDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8501BBF21D6DBC8600E142F1 /* pokedexmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pokedexmusic.mp3; sourceTree = "<group>"; };
 		8501BBF41D6DBD6300E142F1 /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.ttf; sourceTree = "<group>"; };
 		8501BBF61D6DBDB200E142F1 /* Pokedex.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pokedex.ttf; sourceTree = "<group>"; };
+		8573B8A21D7581E10005243C /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				8501BBD51D6D969400E142F1 /* MainVC.swift */,
+				8573B8A21D7581E10005243C /* PokemonDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				8501BBEE1D6DA1C900E142F1 /* PokeCell.swift in Sources */,
 				8501BBD61D6D969400E142F1 /* MainVC.swift in Sources */,
 				8501BBD41D6D969400E142F1 /* AppDelegate.swift in Sources */,
+				8573B8A31D7581E10005243C /* PokemonDetailVC.swift in Sources */,
 				8501BBEC1D6D9C0900E142F1 /* Pokemon.swift in Sources */,
 				8501BBF01D6DB4B200E142F1 /* csv.swift in Sources */,
 			);
@@ -368,6 +372,7 @@
 				8501BBE41D6D969400E142F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
