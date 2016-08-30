@@ -234,8 +234,9 @@
                                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poison/Grass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69r-fc-WMT">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69r-fc-WMT">
                                                                 <constraints>
+                                                                    <constraint firstAttribute="height" constant="26" id="RCg-Q7-A13"/>
                                                                     <constraint firstAttribute="width" constant="120" id="pgq-dZ-R9v"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Pokemon-X-and-Y" family="Pokemon X and Y" pointSize="20"/>
@@ -254,8 +255,9 @@
                                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFE-9m-tgN">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFE-9m-tgN">
                                                                 <constraints>
+                                                                    <constraint firstAttribute="height" constant="26" id="F10-Gz-A00"/>
                                                                     <constraint firstAttribute="width" constant="30" id="mPZ-we-jYc"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Pokemon-X-and-Y" family="Pokemon X and Y" pointSize="20"/>
@@ -280,7 +282,11 @@
                                                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4k-Cs-5Ee">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4k-Cs-5Ee">
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="26" id="Wsw-iK-H2z"/>
+                                                                            <constraint firstAttribute="width" constant="30" id="zIq-Em-auw"/>
+                                                                        </constraints>
                                                                         <fontDescription key="fontDescription" name="Pokemon-X-and-Y" family="Pokemon X and Y" pointSize="20"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
@@ -297,9 +303,10 @@
                                                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="63" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EL-nN-3GY">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EL-nN-3GY">
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="30" id="Fgv-JZ-Eed"/>
+                                                                            <constraint firstAttribute="height" constant="26" id="muG-81-HYq"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="Pokemon-X-and-Y" family="Pokemon X and Y" pointSize="20"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -321,7 +328,11 @@
                                                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpb-Lu-PkH">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpb-Lu-PkH">
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="26" id="hLQ-dk-cQV"/>
+                                                                            <constraint firstAttribute="width" constant="30" id="k6B-Hw-cGW"/>
+                                                                        </constraints>
                                                                         <fontDescription key="fontDescription" name="Pokemon-X-and-Y" family="Pokemon X and Y" pointSize="20"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
@@ -338,8 +349,9 @@
                                                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="62" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeX-W0-De8">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeX-W0-De8">
                                                                         <constraints>
+                                                                            <constraint firstAttribute="height" constant="26" id="FRS-bg-c3G"/>
                                                                             <constraint firstAttribute="width" constant="30" id="Uqy-gZ-Qpw"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="Pokemon-X-and-Y" family="Pokemon X and Y" pointSize="20"/>
@@ -368,9 +380,7 @@
                                             <constraint firstItem="NfD-nR-ua9" firstAttribute="leading" secondItem="k4S-gY-heP" secondAttribute="leading" id="MB0-tl-uY1"/>
                                             <constraint firstItem="NfD-nR-ua9" firstAttribute="leading" secondItem="k4S-gY-heP" secondAttribute="leading" id="U7s-Ri-LB8"/>
                                             <constraint firstAttribute="trailing" secondItem="NfD-nR-ua9" secondAttribute="trailing" id="Zwr-c8-4xS"/>
-                                            <constraint firstAttribute="trailing" secondItem="g21-Kg-RcV" secondAttribute="trailing" id="apF-dZ-YtD"/>
                                             <constraint firstItem="g21-Kg-RcV" firstAttribute="leading" secondItem="k4S-gY-heP" secondAttribute="leading" id="gNr-Mh-ecN"/>
-                                            <constraint firstItem="g21-Kg-RcV" firstAttribute="leading" secondItem="k4S-gY-heP" secondAttribute="leading" id="oMG-xL-26M"/>
                                             <constraint firstAttribute="trailing" secondItem="NfD-nR-ua9" secondAttribute="trailing" id="wzb-Np-Sq9"/>
                                         </constraints>
                                     </stackView>
