@@ -10,16 +10,25 @@ import UIKit
 
 class PokemonDetailVC: UIViewController {
     
-    
+    //MARK: IBOutlets
     @IBOutlet weak var nameLbl: UILabel!
     
+    //MARK: Properties
     var pokemon: Pokemon!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nameLbl.text = pokemon.name.capitalized
-        
-
     }
+    
+    //MARK: Functions
+    
+    //MARK: IBActions
+
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
