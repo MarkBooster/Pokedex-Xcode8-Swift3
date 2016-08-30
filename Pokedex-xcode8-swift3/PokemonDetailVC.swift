@@ -12,6 +12,17 @@ class PokemonDetailVC: UIViewController {
     
     //MARK: IBOutlets
     @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var pokeImg: UIImageView!
+    @IBOutlet weak var descriptionLbl: UILabel!
+    @IBOutlet weak var typeLbl: UILabel!
+    @IBOutlet weak var pokedexIDLbl: UILabel!
+    @IBOutlet weak var heightLbl: UILabel!
+    @IBOutlet weak var defenseLbl: UILabel!
+    @IBOutlet weak var weightLbl: UILabel!
+    @IBOutlet weak var baseAttackLbl: UILabel!
+    @IBOutlet weak var nextEvolutionLbl: UILabel!
+    @IBOutlet weak var currentPokeImg: UIImageView!
+    @IBOutlet weak var evolutionImg: UIImageView!
     
     //MARK: Properties
     var pokemon: Pokemon!
