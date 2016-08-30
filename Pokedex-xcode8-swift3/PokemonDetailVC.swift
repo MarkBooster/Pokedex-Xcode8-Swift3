@@ -51,6 +51,7 @@ class PokemonDetailVC: UIViewController {
         baseAttackLbl.text = pokemon.attack
         defenseLbl.text = pokemon.defense
         typeLbl.text = pokemon.type
+        descriptionLbl.text = pokemon.description
         
         
     }

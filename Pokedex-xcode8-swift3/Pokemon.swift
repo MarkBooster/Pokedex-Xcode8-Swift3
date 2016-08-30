@@ -154,6 +154,43 @@ class Pokemon {
                             } else {
                                 self._type = ""
                             }
+                            
+                            if let descArr = dict["descriptions"] as? [Dictionary<String, String>] , descArr.count > 0 {
+                                
+                                if let uri = descArr[0]["resource_uri"] {
+                                    
+                                    
+                                    let descUrl = URL(string: "\(URL_BASE)\(uri)")
+                                    print(uri)
+                                    if descUrl != nil {
+                                        let descTask = URLSession.shared.dataTask(with: descUrl!, completionHandler: { (data, response, error) in
+                                            if let responseDescData = data {
+                                                do {
+                                                    let descJson = try JSONSerialization.jsonObject(with: responseDescData, options: JSONSerialization.ReadingOptions.allowFragments)
+                                                    
+                                                    if let descDict = descJson as? Dictionary<String, AnyObject> {
+                                                        if let description = descDict["description"] as? String {
+                                                            let newDescription = description.replacingOccurrences(of: "POKMON", with: "Pokémon")
+                                                            self._description = newDescription
+                                                            
+                                                        }
+                                                    }
+                                                    
+                                                    
+                                                    
+                                                } catch let err as NSError {
+                                                    print(err.debugDescription)
+                                                }
+                                            }
+                                            completed()
+
+                                        })
+
+                                        descTask.resume()
+                                    }
+                                }
+                                
+                            }
                         }
                         
                     } catch let err as NSError {
@@ -163,6 +200,7 @@ class Pokemon {
                 completed()
             })
             task.resume()
+            
         }
     }
     
