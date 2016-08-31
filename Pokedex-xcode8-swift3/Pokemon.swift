@@ -18,7 +18,10 @@ class Pokemon {
     private var _defense: String!
     private var _weight: String!
     private var _attack: String!
-    private var _nextEvolution: String!
+    private var _nextEvolutionText: String!
+    private var _nextEvolutionName: String!
+    private var _nextEvolutionId: String!
+    private var _nextEvolutionLevel: String!
     private var _pokemonURL: String!
     
     var description: String {
@@ -70,12 +73,36 @@ class Pokemon {
         return _attack
     }
     
-    var nextEvolution: String {
-        if _nextEvolution == nil {
-            _nextEvolution = ""
+    var nextEvolutionText: String {
+        if _nextEvolutionText == nil {
+            _nextEvolutionText = ""
         }
         
-        return _nextEvolution
+        return _nextEvolutionText
+    }
+    
+    var nextEvolutionName: String {
+        if _nextEvolutionName == nil {
+            _nextEvolutionName = ""
+        }
+        
+        return _nextEvolutionName
+    }
+    
+    var nextEvolutionId: String {
+        if _nextEvolutionId == nil {
+            _nextEvolutionId = ""
+        }
+        
+        return _nextEvolutionId
+    }
+    
+    var nextEvolutionLevel: String {
+        if _nextEvolutionLevel == nil {
+            _nextEvolutionLevel = ""
+        }
+        
+        return _nextEvolutionLevel
     }
     
     var name: String {
@@ -123,7 +150,33 @@ class Pokemon {
                             
                             if let defense = dict["defense"] as? Int {
                                 self._defense = "\(defense)"
+                                
+                            }
                             
+                            if let evolutions = dict["evolutions"] as? [Dictionary<String,AnyObject>] , evolutions.count > 0 {
+                                if let nextEvo = evolutions[0]["to"] as? String {
+                                    
+                                    if nextEvo.range(of: "mega") == nil {
+                                        
+                                        self._nextEvolutionName = nextEvo
+                                        
+                                        if let uri = evolutions[0]["resource_uri"] as? String {
+                                            let newStr = uri.replacingOccurrences(of: "/api/v1/pokemon/", with: "")
+                                            let nextEvoId = newStr.replacingOccurrences(of: "/", with: "")
+                                            self._nextEvolutionId = nextEvoId
+                                            
+                                            if let lvlExist = evolutions[0]["level"] {
+                                                
+                                                if let lvl = lvlExist as? Int {
+                                                    
+                                                    self._nextEvolutionLevel = "\(lvl)"
+                                                } else {
+                                                    self._nextEvolutionLevel = ""
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                             
                             print(self._weight)
@@ -144,7 +197,7 @@ class Pokemon {
                                         if let name = types[x]["name"] {
                                             
                                             self._type! += "/\(name.capitalized)"
- 
+                                            
                                         }
                                     }
                                 }
@@ -183,9 +236,9 @@ class Pokemon {
                                                 }
                                             }
                                             completed()
-
+                                            
                                         })
-
+                                        
                                         descTask.resume()
                                     }
                                 }
